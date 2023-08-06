@@ -17,12 +17,13 @@ const SingleData = ({ singleData, setUniqueId }) => {
         </figure>
         <div className="card-body h-64 overflow-hidden">
           <p className="text-xl font-semibold flex-grow-0 pb-2">Features</p>
-          {features.map((feature, index) => (
-            // eslint-disable-next-line react/jsx-key
-            <li className="list-none">
-              {index + 1}. {feature}
-            </li>
-          ))}
+          {features &&
+            features.map((feature, index) => (
+              // eslint-disable-next-line react/jsx-key
+              <li className="list-none">
+                {index + 1}. {feature}
+              </li>
+            ))}
 
           <h2 className="card-title font-bold border-t-2 border-fuchsia-950 p-1">
             {name}
